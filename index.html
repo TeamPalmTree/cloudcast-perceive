@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>GDM Radio</title>
+    <style type="text/css">
+        .player {
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            bottom: 0px;
+            right: 0px;
+            background-image: url('assets/img/logo.jpg');
+            background-size: 100% 100%;
+        }
+    </style>
+    <script type="text/javascript" src="assets/js/jquery.min.js" ></script>
+    <script type="text/javascript">
+        $(function() {
+            $('.player').click(function() {
+                $('#player').get(0).play();
+            });
+        });
+    </script>
+</head>
+<body>
+<audio id="player" src="http://icecast.gdmradio.com:8000/128.mp3">
+    Your browser does not support the audio element.
+</audio>
+<div class="player">
+</div>
+</body>
+</html>
