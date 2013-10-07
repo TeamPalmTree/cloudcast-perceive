@@ -1,32 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>GDM Radio</title>
-    <style type="text/css">
-        .player {
-            position: absolute;
-            left: 0px;
-            top: 0px;
-            bottom: 0px;
-            right: 0px;
-            background-image: url('assets/img/logo.jpg');
-            background-size: 100% 100%;
-        }
-    </style>
-    <script type="text/javascript" src="assets/js/jquery.min.js" ></script>
-    <script type="text/javascript">
-        $(function() {
-            $('.player').click(function() {
-                $('#player').get(0).play();
-            });
-        });
-    </script>
+	<title>GDM Radio</title>
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
+	<link rel="stylesheet" type="text/css" href="assets/skin/jplayer.blue.monday.css"/>
+	<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
+	<script type="text/javascript" src="assets/js/jquery.jplayer.js"></script>
+	<script type="text/javascript" src="assets/js/perceive.js"></script>
 </head>
 <body>
-<audio id="player" src="http://icecast.gdmradio.com:8000/128.mp3">
-    Your browser does not support the audio element.
-</audio>
-<div class="player">
+<div id="content">
+	<div id="logo">
+		<div id="lgtopcntr" class="lgvert">
+			<div id="lgtop"></div>
+		</div>
+		<div id="lgbtmcntr" class="lgvert">
+			<div id="lgbtm"></div>
+		</div>
+	</div>
+	<div id="jquery_jplayer_1" class="jp-jplayer"></div>
+	<div id="jp_container_1" class="jp-audio-stream plvert">
+		<div class="jp-gui jp-interface">
+			<div class="jp-type-single">
+				<table class="jp-controls">
+					<tr>
+						<td><a href="javascript:;" class="jp-downvote" tabindex="1"></a></td>
+						<td><a href="javascript:;" class="jp-play" tabindex="2"></a></td>
+						<td><a href="javascript:;" class="jp-pause" tabindex="2"></a></td>
+						<td><a href="javascript:;" class="jp-upvote" tabindex="3"></a></td>
+					</tr>
+				</table>
+				<div class="jp-volume-bar">
+					<div class="jp-volume-bar-value"></div>
+				</div>
+			</div>
+			<!-- <div class="jp-title">
+				<ul>
+					<li>GDM Radio</li>
+				</ul>
+			</div> -->
+			<div class="jp-no-solution">
+				<span>Update Required</span>
+				To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.
+			</div>
+		</div>
+	</div>
 </div>
 </body>
 </html>

@@ -1,0 +1,171 @@
+/*
+ * Skin for jPlayer Plugin (jQuery JavaScript Library)
+ * http://www.jplayer.org
+ *
+ * Skin Name: GDM Radio
+ * 
+ * This skin only applies to jp-audio-stream type players
+ *
+ * Copyright (c) 2013 Team Palm Tree, LLC
+ *
+ * Dual licensed under the MIT and GPL licenses.
+ *  - http://www.opensource.org/licenses/mit-license.php
+ *  - http://www.gnu.org/copyleft/gpl.html
+ *
+ * Adapted from Blue Monday, Happyworm, LTD
+ *
+ * Author: Daniel Farmer
+ * Skin Version: 1.0 (jPlayer 2.2.0)
+ * Date: August 25th, 2013
+ */
+
+div.jp-audio-stream {
+	display: table;
+}
+
+div.jp-interface {
+	position: relative;
+	min-width: 200px;
+	display: table-cell;
+	vertical-align: middle;
+}
+
+div.jp-audio-stream div.jp-type-single div.jp-interface {
+}
+
+/* @group CONTROLS */
+
+/* div.jp-controls-holder {
+	clear: both;
+	width:440px;
+	margin:0 auto;
+	position: relative;
+	overflow:hidden;
+	top:-8px; /* This negative value depends on the size of the text in jp-currentTime and jp-duration
+} */
+
+div.jp-interface table.jp-controls {
+	margin:0;
+	padding: 0;
+	overflow:hidden;
+	width: 100%;
+}
+
+div.jp-interface table.jp-controls td {
+	text-align: center;
+}
+
+div.jp-interface table.jp-controls a {
+	display:inline-block;
+	overflow:hidden;
+	min-height: 30px;
+	min-width: 30px;
+}
+
+div.jp-interface table.jp-controls a:active {
+	outtdne: none;
+}
+
+a.jp-downvote, a.jp-play, a.jp-pause, a.jp-upvote {
+	width:50px;
+	height:50px;
+}
+
+a.jp-downvote {
+	background: url("downvote.png") 0 0 no-repeat;
+	background-size: contain;
+}
+
+a.jp-downvote:hover {
+	background: url("downvote_hover.png") 0 0 no-repeat;
+	background-size: contain;
+}
+
+a.jp-play {
+	background: url("play.png") 0 0 no-repeat;
+	background-size: contain;
+}
+
+a.jp-play:hover {
+	background: url("play_hover.png") 0 0 no-repeat;
+	background-size: contain;
+}
+
+a.jp-pause {
+	background: url("pause.png") 0 0 no-repeat;
+	background-size: contain;
+	display: none;
+}
+
+a.jp-pause:hover {
+	background: url("pause_hover.png") 0 0 no-repeat;
+	background-size: contain;
+}
+
+a.jp-upvote {
+	background: url("upvote.png") 0 0 no-repeat;
+	background-size: contain;
+}
+
+a.jp-upvote:hover {
+	background: url("upvote_hover.png") 0 0 no-repeat;
+	background-size: contain;
+}
+
+
+/* @end */
+
+/* @group volume controls */
+
+div.jp-volume-bar {
+	overflow:hidden;
+	background-color: #00e8ff;
+	width:100%;
+	height:8px;
+	margin-top:5px;
+	cursor:pointer;
+}
+
+div.jp-volume-bar-value {
+	background-color: #0080ff;
+	height: 8px;
+}
+/* @end */
+/* 
+div.jp-title ul {
+	list-style-type: none;
+} */
+
+div.jp-jplayer audio,
+div.jp-jplayer {
+	width:0px;
+	height:0px;
+}
+
+div.jp-jplayer {
+	background-color: #000000;
+}
+
+/* @group NO SOLUTION error feedback */
+
+.jp-no-solution {
+	padding:5px;
+	font-size:.8em;
+	background-color:#eee;
+	border:2px solid #009be3;
+	color:#000;
+	display:none;
+}
+
+.jp-no-solution a {
+	color:#000;
+}
+
+.jp-no-solution span {
+	font-size:1em;
+	display:block;
+	text-align:center;
+	font-weight:bold;
+}
+
+/* @end */

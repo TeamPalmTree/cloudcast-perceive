@@ -1,0 +1,57 @@
+body {
+	background-color: #000;
+	margin: 0;
+}
+
+#content {
+	padding: 20px;
+	min-height: 200px;
+	min-width: 200px;
+}
+
+#logo {
+	display: table;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+#lgtopcntr {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+#lgtop {
+	background-image: url('../img/logotop.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+#lgbtmcntr {
+	display: table-cell;
+	vertical-align: middle;
+}
+
+#lgbtm {
+	background-image: url('../img/logobtm.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+}
+
+.lgvert {
+	float: left;
+	clear: both;
+}
+
+.lgcntrhorz {
+	float: left;
+	margin-left: 50px;
+}
+
+.plvert {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.plhorz {
+	float: right;
+}
