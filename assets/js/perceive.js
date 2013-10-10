@@ -118,7 +118,7 @@ function perceive() {
 	
 	// OnLoad
 	onResize();
-	updateStatus();
+	updateStatus();	
 }
 
 $(document).ready(perceive);
