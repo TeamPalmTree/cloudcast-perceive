@@ -13,7 +13,10 @@ function perceive() {
 	, logoBtmContainer = $('#lgbtmcntr')
 	, player = $('#jquery_jplayer_1')
 	, playerContainer = $('#jp_container_1')
-	, playerControls = $('.jp-controls a');
+	, playerControls = $('.jp-controls a')
+	, statusArtist = $('#stata')
+	, statusSong = $('#stats')
+	, title = $('title');
 	
 	// Audio Setup
 	player.jPlayer({
@@ -31,6 +34,32 @@ function perceive() {
 	$(window).resize(onResize);
 	
 	// Functions
+	
+	// Updates the current song/artist status, reschedules itself
+	function updateStatus() {
+		$.ajax("http://cloudcast.gdmradio.com/engine/status.json")
+			.done(onStatusUpdateAjaxComplete);
+		
+		setTimeout(updateStatus, 5000);
+	}
+	
+	function onStatusUpdateAjaxComplete(data) {
+		var status;
+		try {
+			status = eval("(" + data +")");
+		} catch (err) {
+			// Alex probably broke something
+		}
+		if (status) {
+			var song = status["current_file_title"];
+			var artist = status["current_file_artist"];
+			statusArtist.html(artist);
+			statusArtist.attr('title', artist);
+			statusSong.html(song);			
+			statusSong.attr('title', song);
+			title.html('GDM Radio - ' + song + ' - ' + artist);
+		}
+	}
 	
 	//On window resize, fix arrangement and size of the logos and player controls
 	function onResize() {
@@ -89,6 +118,7 @@ function perceive() {
 	
 	// OnLoad
 	onResize();
+	updateStatus();
 }
 
 $(document).ready(perceive);

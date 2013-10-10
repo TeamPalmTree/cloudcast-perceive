@@ -4,6 +4,8 @@
 	<title>GDM Radio</title>
 	<link rel="stylesheet" type="text/css" href="assets/css/style.css"/>
 	<link rel="stylesheet" type="text/css" href="assets/skin/jplayer.blue.monday.css"/>
+	<head profile="http://www.w3.org/2005/10/profile">
+	<link rel="icon" type="image/vnd.Microsoft.icon" href="/assets/img/icon.ico" />
 	<script type="text/javascript" src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-2.0.3.min.js"></script>
 	<script type="text/javascript" src="assets/js/jquery.jplayer.js"></script>
 	<script type="text/javascript" src="assets/js/perceive.js"></script>
@@ -24,21 +26,15 @@
 			<div class="jp-type-single">
 				<table class="jp-controls">
 					<tr>
-						<td><a href="javascript:;" class="jp-downvote" tabindex="1"></a></td>
 						<td><a href="javascript:;" class="jp-play" tabindex="2"></a></td>
 						<td><a href="javascript:;" class="jp-pause" tabindex="2"></a></td>
-						<td><a href="javascript:;" class="jp-upvote" tabindex="3"></a></td>
+						<td id="status"><p id="stats">Song</p><p id="stata">Artist</p></td>
 					</tr>
 				</table>
 				<div class="jp-volume-bar">
 					<div class="jp-volume-bar-value"></div>
 				</div>
 			</div>
-			<!-- <div class="jp-title">
-				<ul>
-					<li>GDM Radio</li>
-				</ul>
-			</div> -->
 			<div class="jp-no-solution">
 				<span>Update Required</span>
 				To play the media you will need to either update your browser to a recent version or update your <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a>.

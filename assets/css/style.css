@@ -55,3 +55,28 @@ body {
 .plhorz {
 	float: right;
 }
+
+#status {
+	width: 80%;
+	color: #808285;
+	font-family: "Segoe UI", "Myriad Pro", arial, sans-serif;
+	font-weight: 500;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+#status p {
+	max-width: 240px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	margin: 0 0 5px 0;
+}
+
+#stats {
+	color: #00e8ff;
+}
+
+#stata {
+	color: #0080ff;
+}
