@@ -23,6 +23,7 @@ function perceive() {
 		ready: function () {
 			$(this).jPlayer("setMedia", {
 				mp3: "http://icecast.gdmradio.com:8000/128.mp3",
+				oga: "http://icecast.gdmradio.com:8000/128.ogg"
 			});
 		},
 		swfPath: "/",
